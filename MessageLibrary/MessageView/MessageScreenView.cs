@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MessageView
 {
-    public partial class Form1 : Form
+    public partial class MessageScreenView : Form
     {
-        public Form1()
+        public MessageScreenView()
         {
             InitializeComponent();
         }
