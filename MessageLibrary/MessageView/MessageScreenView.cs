@@ -15,6 +15,8 @@ namespace MessageView
         public MessageScreenView()
         {
             InitializeComponent();
+
+            ActiveControl = lbl_Title;
         }
     }
 }
