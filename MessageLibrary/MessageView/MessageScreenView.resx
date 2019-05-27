@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_description.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet consectetur adipiscing elit vitae, posuere tellus aliquet semper natoque in arcu, cum laoreet morbi ac aptent risus dictum. Enim vehicula dapibus interdum sodales conubia hac quis lacus eu, torquent sapien porta curae dictum feugiat quam at phasellus sagittis, neque a vivamus cum pharetra taciti eget pulvinar. Sociis iaculis vivamus nibh sapien eget viverra est magnis massa natoque, luctus diam placerat euismod sociosqu ornare feugiat eros integer, sodales nulla semper libero erat lacus facilisis hac leo.</value>
-  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
