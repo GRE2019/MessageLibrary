@@ -6,4 +6,6 @@ Contiene los siguientes modos:
   
   Mensaje de Información.
   
-  Mensaje de Alerta.
+  Mensaje de Warning.
+  
+  Mensaje de Éxito.
