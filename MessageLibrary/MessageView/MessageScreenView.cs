@@ -20,13 +20,12 @@ namespace MessageView
     }
     public partial class MessageScreenView : Form
     {
-        public MessageScreenView()
+        public MessageScreenView(MessageType messageType, string description)
         {
             InitializeComponent();
             ActiveControl = lbl_Title;
-            PaintMessageScreen(MessageType.SUCCESS);
-
-            lbl_Description.Text = "Se ha cambiado el producto para entrega en ALMCEN porque no queda inventario en Tienda Equipetrol.";
+            PaintMessageScreen(messageType);
+            lbl_Description.Text = description;
         }
 
         public void PaintMessageScreen(MessageType messageType)
