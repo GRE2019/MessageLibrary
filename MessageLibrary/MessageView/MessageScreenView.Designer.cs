@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.tb_Parent = new System.Windows.Forms.TableLayoutPanel();
-            this.img_Icon = new System.Windows.Forms.PictureBox();
             this.tb_Text = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_Description = new System.Windows.Forms.Label();
-            this.img_2 = new System.Windows.Forms.PictureBox();
             this.tb_Button = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Ok = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.img_Icon = new System.Windows.Forms.PictureBox();
+            this.img_2 = new System.Windows.Forms.PictureBox();
             this.tb_Parent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).BeginInit();
             this.tb_Text.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
             this.tb_Button.SuspendLayout();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_Parent
@@ -65,19 +65,6 @@
             this.tb_Parent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tb_Parent.Size = new System.Drawing.Size(576, 141);
             this.tb_Parent.TabIndex = 0;
-            // 
-            // img_Icon
-            // 
-            this.img_Icon.BackColor = System.Drawing.Color.Gainsboro;
-            this.img_Icon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_Icon.Image = global::MessageView.Properties.Resources.Success_125px;
-            this.img_Icon.Location = new System.Drawing.Point(0, 0);
-            this.img_Icon.Margin = new System.Windows.Forms.Padding(0);
-            this.img_Icon.Name = "img_Icon";
-            this.img_Icon.Size = new System.Drawing.Size(100, 100);
-            this.img_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_Icon.TabIndex = 1;
-            this.img_Icon.TabStop = false;
             // 
             // tb_Text
             // 
@@ -121,16 +108,6 @@
             this.lbl_Description.Text = "Lorem ipsum dolor sit amet consectetur adipiscing elit.";
             this.lbl_Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // img_2
-            // 
-            this.img_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_2.Location = new System.Drawing.Point(0, 100);
-            this.img_2.Margin = new System.Windows.Forms.Padding(0);
-            this.img_2.Name = "img_2";
-            this.img_2.Size = new System.Drawing.Size(100, 41);
-            this.img_2.TabIndex = 3;
-            this.img_2.TabStop = false;
-            // 
             // tb_Button
             // 
             this.tb_Button.ColumnCount = 3;
@@ -159,6 +136,7 @@
             this.btn_Cancel.TabIndex = 0;
             this.btn_Cancel.Text = "Cancelar";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // btn_Ok
             // 
@@ -171,6 +149,7 @@
             this.btn_Ok.TabIndex = 1;
             this.btn_Ok.Text = "Aceptar";
             this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.Btn_Ok_Click);
             // 
             // panel
             // 
@@ -181,6 +160,29 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(576, 141);
             this.panel.TabIndex = 1;
+            // 
+            // img_Icon
+            // 
+            this.img_Icon.BackColor = System.Drawing.Color.Gainsboro;
+            this.img_Icon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_Icon.Image = global::MessageView.Properties.Resources.Success_125px;
+            this.img_Icon.Location = new System.Drawing.Point(0, 0);
+            this.img_Icon.Margin = new System.Windows.Forms.Padding(0);
+            this.img_Icon.Name = "img_Icon";
+            this.img_Icon.Size = new System.Drawing.Size(100, 100);
+            this.img_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_Icon.TabIndex = 1;
+            this.img_Icon.TabStop = false;
+            // 
+            // img_2
+            // 
+            this.img_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_2.Location = new System.Drawing.Point(0, 100);
+            this.img_2.Margin = new System.Windows.Forms.Padding(0);
+            this.img_2.Name = "img_2";
+            this.img_2.Size = new System.Drawing.Size(100, 41);
+            this.img_2.TabIndex = 3;
+            this.img_2.TabStop = false;
             // 
             // MessageScreenView
             // 
@@ -198,12 +200,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.tb_Parent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).EndInit();
             this.tb_Text.ResumeLayout(false);
             this.tb_Text.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_2)).EndInit();
             this.tb_Button.ResumeLayout(false);
             this.panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -25,6 +25,8 @@ namespace MessageView
             InitializeComponent();
             ActiveControl = lbl_Title;
             PaintMessageScreen(MessageType.SUCCESS);
+
+            lbl_Description.Text = "Se ha cambiado el producto para entrega en ALMCEN porque no queda inventario en Tienda Equipetrol.";
         }
 
         public void PaintMessageScreen(MessageType messageType)
@@ -57,12 +59,22 @@ namespace MessageView
 
                 case MessageType.WARNING:
                     lbl_Title.Text = "CUIDADO...!";
-                    lbl_Title.ForeColor = Color.LightSalmon;
-                    img_Icon.BackColor = Color.LightSalmon;
-                    img_2.BackColor = Color.LightSalmon;
+                    lbl_Title.ForeColor = Color.FromArgb(255,168,56);
+                    img_Icon.BackColor = Color.FromArgb(255, 168, 56);
+                    img_2.BackColor = Color.FromArgb(255, 168, 56);
                     img_Icon.Image = Properties.Resources.Warning_125px;
                     break;
             }
+        }
+
+        private void Btn_Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Btn_Ok_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
