@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.tb_Parent = new System.Windows.Forms.TableLayoutPanel();
+            this.img_Icon = new System.Windows.Forms.PictureBox();
             this.tb_Text = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_Description = new System.Windows.Forms.Label();
+            this.img_2 = new System.Windows.Forms.PictureBox();
             this.tb_Button = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Ok = new System.Windows.Forms.Button();
+            this.mtxt_Input = new System.Windows.Forms.MaskedTextBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.img_Icon = new System.Windows.Forms.PictureBox();
-            this.img_2 = new System.Windows.Forms.PictureBox();
             this.tb_Parent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).BeginInit();
             this.tb_Text.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
             this.tb_Button.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_Parent
@@ -65,6 +66,19 @@
             this.tb_Parent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tb_Parent.Size = new System.Drawing.Size(576, 141);
             this.tb_Parent.TabIndex = 0;
+            // 
+            // img_Icon
+            // 
+            this.img_Icon.BackColor = System.Drawing.Color.Gainsboro;
+            this.img_Icon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_Icon.Image = global::MessageView.Properties.Resources.Success_125px;
+            this.img_Icon.Location = new System.Drawing.Point(0, 0);
+            this.img_Icon.Margin = new System.Windows.Forms.Padding(0);
+            this.img_Icon.Name = "img_Icon";
+            this.img_Icon.Size = new System.Drawing.Size(100, 100);
+            this.img_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_Icon.TabIndex = 1;
+            this.img_Icon.TabStop = false;
             // 
             // tb_Text
             // 
@@ -108,6 +122,16 @@
             this.lbl_Description.Text = "Lorem ipsum dolor sit amet consectetur adipiscing elit.";
             this.lbl_Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // img_2
+            // 
+            this.img_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_2.Location = new System.Drawing.Point(0, 100);
+            this.img_2.Margin = new System.Windows.Forms.Padding(0);
+            this.img_2.Name = "img_2";
+            this.img_2.Size = new System.Drawing.Size(100, 41);
+            this.img_2.TabIndex = 3;
+            this.img_2.TabStop = false;
+            // 
             // tb_Button
             // 
             this.tb_Button.ColumnCount = 3;
@@ -116,6 +140,7 @@
             this.tb_Button.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tb_Button.Controls.Add(this.btn_Cancel, 1, 0);
             this.tb_Button.Controls.Add(this.btn_Ok, 2, 0);
+            this.tb_Button.Controls.Add(this.mtxt_Input, 0, 0);
             this.tb_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Button.Location = new System.Drawing.Point(100, 100);
             this.tb_Button.Margin = new System.Windows.Forms.Padding(0);
@@ -151,6 +176,21 @@
             this.btn_Ok.UseVisualStyleBackColor = true;
             this.btn_Ok.Click += new System.EventHandler(this.Btn_Ok_Click);
             // 
+            // mtxt_Input
+            // 
+            this.mtxt_Input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxt_Input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtxt_Input.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxt_Input.Location = new System.Drawing.Point(20, 4);
+            this.mtxt_Input.Margin = new System.Windows.Forms.Padding(20, 4, 3, 3);
+            this.mtxt_Input.Mask = "00.00";
+            this.mtxt_Input.Name = "mtxt_Input";
+            this.mtxt_Input.Size = new System.Drawing.Size(277, 32);
+            this.mtxt_Input.SkipLiterals = false;
+            this.mtxt_Input.TabIndex = 2;
+            this.mtxt_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtxt_Input.ValidatingType = typeof(int);
+            // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -160,29 +200,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(576, 141);
             this.panel.TabIndex = 1;
-            // 
-            // img_Icon
-            // 
-            this.img_Icon.BackColor = System.Drawing.Color.Gainsboro;
-            this.img_Icon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_Icon.Image = global::MessageView.Properties.Resources.Success_125px;
-            this.img_Icon.Location = new System.Drawing.Point(0, 0);
-            this.img_Icon.Margin = new System.Windows.Forms.Padding(0);
-            this.img_Icon.Name = "img_Icon";
-            this.img_Icon.Size = new System.Drawing.Size(100, 100);
-            this.img_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_Icon.TabIndex = 1;
-            this.img_Icon.TabStop = false;
-            // 
-            // img_2
-            // 
-            this.img_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_2.Location = new System.Drawing.Point(0, 100);
-            this.img_2.Margin = new System.Windows.Forms.Padding(0);
-            this.img_2.Name = "img_2";
-            this.img_2.Size = new System.Drawing.Size(100, 41);
-            this.img_2.TabIndex = 3;
-            this.img_2.TabStop = false;
             // 
             // MessageScreenView
             // 
@@ -200,12 +217,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.tb_Parent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).EndInit();
             this.tb_Text.ResumeLayout(false);
             this.tb_Text.PerformLayout();
-            this.tb_Button.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_2)).EndInit();
+            this.tb_Button.ResumeLayout(false);
+            this.tb_Button.PerformLayout();
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -222,6 +240,7 @@
         private System.Windows.Forms.TableLayoutPanel tb_Button;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.MaskedTextBox mtxt_Input;
     }
 }
 

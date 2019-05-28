@@ -16,7 +16,8 @@ namespace MessageView
         SUCCESS,
         INFORMATION,
         ERROR,
-        WARNING
+        WARNING,
+        INPUT
     }
     public partial class MessageScreenView : Form
     {
@@ -24,6 +25,8 @@ namespace MessageView
         {
             InitializeComponent();
             ActiveControl = lbl_Title;
+            mtxt_Input.Enabled = false;
+            mtxt_Input.Visible = false;
             PaintMessageScreen(messageType);
             lbl_Description.Text = description;
         }
@@ -62,6 +65,16 @@ namespace MessageView
                     img_Icon.BackColor = Color.FromArgb(255, 168, 56);
                     img_2.BackColor = Color.FromArgb(255, 168, 56);
                     img_Icon.Image = Properties.Resources.Warning_125px;
+                    break;
+
+                case MessageType.INPUT:
+                    lbl_Title.Text = "ESCRIBA SU RESPUESTA!";
+                    lbl_Title.ForeColor = Color.Gray;
+                    img_Icon.BackColor = Color.Gray;
+                    img_2.BackColor = Color.Gray;
+                    img_Icon.Image = Properties.Resources.Warning_125px;
+                    mtxt_Input.Enabled = true;
+                    mtxt_Input.Visible = true;
                     break;
             }
         }
