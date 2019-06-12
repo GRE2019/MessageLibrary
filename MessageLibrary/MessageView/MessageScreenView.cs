@@ -17,7 +17,8 @@ namespace MessageView
         INFORMATION,
         ERROR,
         WARNING,
-        INPUT
+        INPUT,
+        CONFIRMATION
     }
     public partial class MessageScreenView : Form
     {
@@ -41,6 +42,9 @@ namespace MessageView
                     img_Icon.BackColor = Color.MediumSeaGreen;
                     img_2.BackColor = Color.MediumSeaGreen;
                     img_Icon.Image = Properties.Resources.Success_125px;
+
+                    btn_Cancel.Enabled = false;
+                    btn_Cancel.Visible = false;
                     break;
 
                 case MessageType.INFORMATION:
@@ -49,6 +53,9 @@ namespace MessageView
                     img_Icon.BackColor = Color.SteelBlue;
                     img_2.BackColor = Color.SteelBlue;
                     img_Icon.Image = Properties.Resources.Info_125px;
+
+                    btn_Cancel.Enabled = false;
+                    btn_Cancel.Visible = false;
                     break;
 
                 case MessageType.ERROR:
@@ -57,6 +64,9 @@ namespace MessageView
                     img_Icon.BackColor = Color.IndianRed;
                     img_2.BackColor = Color.IndianRed;
                     img_Icon.Image = Properties.Resources.Error_125px;
+
+                    btn_Cancel.Enabled = false;
+                    btn_Cancel.Visible = false;
                     break;
 
                 case MessageType.WARNING:
@@ -65,6 +75,9 @@ namespace MessageView
                     img_Icon.BackColor = Color.FromArgb(255, 168, 56);
                     img_2.BackColor = Color.FromArgb(255, 168, 56);
                     img_Icon.Image = Properties.Resources.Warning_125px;
+
+                    btn_Cancel.Enabled = false;
+                    btn_Cancel.Visible = false;
                     break;
 
                 case MessageType.INPUT:
@@ -76,16 +89,27 @@ namespace MessageView
                     mtxt_Input.Enabled = true;
                     mtxt_Input.Visible = true;
                     break;
+
+                case MessageType.CONFIRMATION:
+                    lbl_Title.Text = "CONFIRMAR!";
+                    lbl_Title.ForeColor = Color.MediumPurple;
+                    img_Icon.BackColor = Color.MediumPurple;
+                    img_2.BackColor = Color.MediumPurple;
+                    img_Icon.Image = Properties.Resources.Confirmation_125px;
+                    break;
             }
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
         private void Btn_Ok_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
+
             Close();
         }
     }

@@ -71,7 +71,7 @@
             // 
             this.img_Icon.BackColor = System.Drawing.Color.Gainsboro;
             this.img_Icon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_Icon.Image = global::MessageView.Properties.Resources.Success_125px;
+            this.img_Icon.Image = global::MessageView.Properties.Resources.Confirmation_125px;
             this.img_Icon.Location = new System.Drawing.Point(0, 0);
             this.img_Icon.Margin = new System.Windows.Forms.Padding(0);
             this.img_Icon.Name = "img_Icon";
