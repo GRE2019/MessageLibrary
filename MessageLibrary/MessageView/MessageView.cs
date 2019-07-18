@@ -20,14 +20,16 @@ namespace MessageView
         INPUT,
         CONFIRMATION
     }
+
     public partial class MessageView : Form
     {
-        public MessageView(Type Type, string description)
+        public static string resultValue;
+        public MessageView(Type Type, string description, decimal amount  = 0)
         {
             InitializeComponent();
             ActiveControl = lbl_Title;
-            mtxt_Input.Enabled = false;
-            mtxt_Input.Visible = false;
+            txt_Input.Enabled = false;
+            txt_Input.Visible = false;
             PaintMessageScreen(Type);
             lbl_Description.Text = description;
         }
@@ -86,8 +88,9 @@ namespace MessageView
                     img_Icon.BackColor = Color.Gray;
                     img_2.BackColor = Color.Gray;
                     img_Icon.Image = Properties.Resources.Warning_125px;
-                    mtxt_Input.Enabled = true;
-                    mtxt_Input.Visible = true;
+                    txt_Input.Enabled = true;
+                    txt_Input.Visible = true;
+                    
                     break;
 
                 case Type.CONFIRMATION:
@@ -109,7 +112,7 @@ namespace MessageView
         private void Btn_Ok_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-
+            resultValue = string.IsNullOrEmpty(txt_Input.Text) ? "0.00" : string.Format("{0:N2}", txt_Input.Text);
             Close();
         }
     }

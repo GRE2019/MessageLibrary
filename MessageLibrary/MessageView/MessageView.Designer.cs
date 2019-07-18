@@ -37,8 +37,8 @@
             this.tb_Button = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Ok = new System.Windows.Forms.Button();
-            this.mtxt_Input = new System.Windows.Forms.MaskedTextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.txt_Input = new System.Windows.Forms.TextBox();
             this.tb_Parent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Icon)).BeginInit();
             this.tb_Text.SuspendLayout();
@@ -140,7 +140,7 @@
             this.tb_Button.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tb_Button.Controls.Add(this.btn_Cancel, 1, 0);
             this.tb_Button.Controls.Add(this.btn_Ok, 2, 0);
-            this.tb_Button.Controls.Add(this.mtxt_Input, 0, 0);
+            this.tb_Button.Controls.Add(this.txt_Input, 0, 0);
             this.tb_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Button.Location = new System.Drawing.Point(100, 100);
             this.tb_Button.Margin = new System.Windows.Forms.Padding(0);
@@ -176,21 +176,6 @@
             this.btn_Ok.UseVisualStyleBackColor = true;
             this.btn_Ok.Click += new System.EventHandler(this.Btn_Ok_Click);
             // 
-            // mtxt_Input
-            // 
-            this.mtxt_Input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxt_Input.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxt_Input.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxt_Input.Location = new System.Drawing.Point(20, 4);
-            this.mtxt_Input.Margin = new System.Windows.Forms.Padding(20, 4, 3, 3);
-            this.mtxt_Input.Mask = "00.00";
-            this.mtxt_Input.Name = "mtxt_Input";
-            this.mtxt_Input.Size = new System.Drawing.Size(277, 32);
-            this.mtxt_Input.SkipLiterals = false;
-            this.mtxt_Input.TabIndex = 2;
-            this.mtxt_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.mtxt_Input.ValidatingType = typeof(int);
-            // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -200,6 +185,18 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(576, 141);
             this.panel.TabIndex = 1;
+            // 
+            // txt_Input
+            // 
+            this.txt_Input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Input.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.txt_Input.Location = new System.Drawing.Point(6, 7);
+            this.txt_Input.Margin = new System.Windows.Forms.Padding(6, 7, 6, 3);
+            this.txt_Input.Name = "txt_Input";
+            this.txt_Input.Size = new System.Drawing.Size(288, 27);
+            this.txt_Input.TabIndex = 2;
+            this.txt_Input.Text = "0.00";
+            this.txt_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MessageView
             // 
@@ -240,7 +237,7 @@
         private System.Windows.Forms.TableLayoutPanel tb_Button;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Ok;
-        private System.Windows.Forms.MaskedTextBox mtxt_Input;
+        private System.Windows.Forms.TextBox txt_Input;
     }
 }
 
