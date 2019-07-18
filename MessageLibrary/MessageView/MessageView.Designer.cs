@@ -1,6 +1,6 @@
 ﻿namespace MessageView
 {
-    partial class MessageScreenView
+    partial class MessageView
     {
         /// <summary>
         /// Required designer variable.
@@ -201,7 +201,7 @@
             this.panel.Size = new System.Drawing.Size(576, 141);
             this.panel.TabIndex = 1;
             // 
-            // MessageScreenView
+            // MessageView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,7 +211,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MessageScreenView";
+            this.Name = "MessageView";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

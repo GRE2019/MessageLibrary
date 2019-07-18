@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MessageView
 {
-    public enum MessageType
+    public enum Type
     {
         SUCCESS,
         INFORMATION,
@@ -20,23 +20,23 @@ namespace MessageView
         INPUT,
         CONFIRMATION
     }
-    public partial class MessageScreenView : Form
+    public partial class MessageView : Form
     {
-        public MessageScreenView(MessageType messageType, string description)
+        public MessageView(Type Type, string description)
         {
             InitializeComponent();
             ActiveControl = lbl_Title;
             mtxt_Input.Enabled = false;
             mtxt_Input.Visible = false;
-            PaintMessageScreen(messageType);
+            PaintMessageScreen(Type);
             lbl_Description.Text = description;
         }
 
-        public void PaintMessageScreen(MessageType messageType)
+        public void PaintMessageScreen(Type Type)
         {
-            switch (messageType)
+            switch (Type)
             {
-                case MessageType.SUCCESS:
+                case Type.SUCCESS:
                     lbl_Title.Text = "ÉXITO!";
                     lbl_Title.ForeColor = Color.MediumSeaGreen;
                     img_Icon.BackColor = Color.MediumSeaGreen;
@@ -47,7 +47,7 @@ namespace MessageView
                     btn_Cancel.Visible = false;
                     break;
 
-                case MessageType.INFORMATION:
+                case Type.INFORMATION:
                     lbl_Title.Text = "INFORMACIÓN!";
                     lbl_Title.ForeColor = Color.SteelBlue;
                     img_Icon.BackColor = Color.SteelBlue;
@@ -58,7 +58,7 @@ namespace MessageView
                     btn_Cancel.Visible = false;
                     break;
 
-                case MessageType.ERROR:
+                case Type.ERROR:
                     lbl_Title.Text = "OH NO!";
                     lbl_Title.ForeColor = Color.IndianRed;
                     img_Icon.BackColor = Color.IndianRed;
@@ -69,7 +69,7 @@ namespace MessageView
                     btn_Cancel.Visible = false;
                     break;
 
-                case MessageType.WARNING:
+                case Type.WARNING:
                     lbl_Title.Text = "CUIDADO...!";
                     lbl_Title.ForeColor = Color.FromArgb(255,168,56);
                     img_Icon.BackColor = Color.FromArgb(255, 168, 56);
@@ -80,7 +80,7 @@ namespace MessageView
                     btn_Cancel.Visible = false;
                     break;
 
-                case MessageType.INPUT:
+                case Type.INPUT:
                     lbl_Title.Text = "ESCRIBA SU RESPUESTA!";
                     lbl_Title.ForeColor = Color.Gray;
                     img_Icon.BackColor = Color.Gray;
@@ -90,7 +90,7 @@ namespace MessageView
                     mtxt_Input.Visible = true;
                     break;
 
-                case MessageType.CONFIRMATION:
+                case Type.CONFIRMATION:
                     lbl_Title.Text = "CONFIRMAR!";
                     lbl_Title.ForeColor = Color.MediumPurple;
                     img_Icon.BackColor = Color.MediumPurple;
