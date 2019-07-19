@@ -26,12 +26,19 @@ namespace MessageView
         public static string resultValue;
         public MessageView(Type Type, string description, decimal amount  = 0)
         {
-            InitializeComponent();
-            ActiveControl = lbl_Title;
-            txt_Input.Enabled = false;
-            txt_Input.Visible = false;
-            PaintMessageScreen(Type);
-            lbl_Description.Text = description;
+            try
+            {
+                InitializeComponent();
+                ActiveControl = lbl_Title;
+                txt_Input.Enabled = false;
+                txt_Input.Visible = false;
+                PaintMessageScreen(Type);
+                lbl_Description.Text = description;
+                txt_Input.Text = amount.ToString();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public void PaintMessageScreen(Type Type)
